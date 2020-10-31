@@ -113,6 +113,7 @@ body {
 .contacts {
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 
 .contacts .item + .item {
@@ -120,15 +121,36 @@ body {
 }
 
 .contacts .link {
-    display: block;
+    display: inline-flex;
     padding-top: 32px;
     padding-bottom: 32px;
+    align-items: center;
 
     color: var(--primary-text-color);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+}
+
+.contacts .link::before {
+    content:'';
+    margin-right: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-email::before {
+    background-image: url('../images/icon-envelope.svg');
+    width: 16px;
+    height: 12px;
+}
+
+.icon-phone::before {
+    background-image: url('../images/icon-vector.svg');
+    width: 10px;
+    height: 16px;
 }
 
 .contacts .link:hover,
@@ -150,8 +172,22 @@ body {
     letter-spacing: 0.06em;
 }
 .hero {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--secondary-bg-color);
     /*outline: 2px solid tomato;*/
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/img-hero-opt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -174,6 +210,35 @@ body {
 
 .features .item {
     width: 270px;
+}
+
+.features .item::before {
+    display: block;
+    content: '';
+    height: 120px;
+    /*outline: 2px solid tomato;*/
+    margin-bottom: 30px;
+    border-radius: 4px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--additional-bg-color);
+}
+
+.icon-details::before {
+    background-image: url('../images/icon-antenna.svg');
+}
+
+.icon-punctuality::before {
+    background-image: url('../images/icon-clock.svg');
+}
+
+.icon-planning::before {
+    background-image: url('../images/icon-diagram.svg');
+}
+
+.icon-technologies::before {
+    background-image: url('../images/icon-astronaut.svg');
 }
 
 .features .item:not(:last-child) {
@@ -348,6 +413,8 @@ hr {
     border: none;
     background-color: var(--additional-line-color);
     height: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* portfolio-nav */
