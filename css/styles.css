@@ -376,7 +376,8 @@ body {
     fill: var(--icon-color);
 }
 
-.social-icon:hover {
+.social-icon:hover,
+.social-icon:focus {
     fill: var(--white-color);
 }
 
@@ -423,7 +424,8 @@ body {
     
 }
 
-.client-icon:hover {
+.client-icon:hover,
+.client-icon:focus {
     fill: var(--accent-color);
 }
 
@@ -536,7 +538,8 @@ body {
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25)
 }
 
-.social1-link:hover{
+.social1-link:hover, 
+.social1-link:focus {
     background-color: var(--accent-color);
 }
 
