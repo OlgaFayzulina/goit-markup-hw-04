@@ -376,14 +376,20 @@ body {
     fill: var(--icon-color);
 }
 
-.social-icon:hover,
-.social-icon:focus {
+.social-icon:hover {
     fill: var(--white-color);
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: var(--accent-color);
+    outline: none;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+    fill: var(--white-color);
 }
 
 /* regular customers */
@@ -417,6 +423,7 @@ body {
 .client-link:hover,
 .client-link:focus {
     border-color: var(--accent-color);
+    outline: none;
 }
 
 .client-icon {
@@ -424,8 +431,8 @@ body {
     
 }
 
-.client-icon:hover,
-.client-icon:focus {
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
     fill: var(--accent-color);
 }
 
@@ -534,18 +541,26 @@ body {
     margin: 0;
     box-sizing: border-box;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25)
-}
-
-.social1-link:hover, 
-.social1-link:focus {
-    background-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
 .social1-icon {
     display: inline-flex;
     align-items: center;
+    fill: var(--white-color)
+}
+
+.social-nav a:hover,
+.social-nav a:focus {
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.social1-link:hover .social1-icon,
+.social1-link:focus .social1-icon {
+    background-color: var(--accent-color);
+    fill: var(--white-color);
 }
 
 /* стили для potfolio.html */
